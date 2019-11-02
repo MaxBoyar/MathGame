@@ -1,0 +1,153 @@
+html{
+    height: 100%;
+    background:radial-gradient(circle,#fff,#ccc) ;
+
+}
+
+#container{
+    height: 500px;
+    width: 700px;
+    background-color: #87dbde;
+    margin:100px auto;/*top bottom =100px, left right automatic (auto centers things)*/
+    border-radius: 5%;
+    padding: 20px;
+    position: relative;
+}
+
+#score{
+    background-color: burlywood;
+    border-radius: 5%;
+    padding: 15px;
+    position: absolute;
+    left: 630px;
+    color: #6b6151;
+}
+
+#correct{
+    position: absolute;/* makom kavua beyahas le relative*/
+    background-color: #51d692;
+    color: white;
+    left: 45%;
+    padding: 12px;
+    display: none;
+}
+
+#wrong{
+    position: absolute;
+    background-color: #de2131;
+    color: #2b2021;
+    left: 45%;
+    padding: 12px;
+    display: none;
+    
+    
+}
+
+#question{ /*box behaving as the wrong and corect divs is not exist (becuase they are absolute)*/
+    background-color: rgb(167, 104, 212);
+    width: 450px;
+    height: 150px;
+    margin: 50px auto 8px auto;
+    font-size: 100px;
+    text-align: center;
+    font-family: cursive;
+
+}
+
+#instruction{
+    width:450px;
+    height: 50px;
+    margin: 10px auto;
+    background-color: rgb(153, 95, 194) ;
+    text-align: center;/* centers text*/
+    line-height: 50px;/* morid text lemata be div */
+    box-shadow: 0px 4px rgb(120, 40, 177);
+}
+
+
+#boxes{
+    height: 100px;
+    width: 450px;
+    margin: 10px auto;
+    
+}
+
+.box{
+    
+    width: 100px;
+    height: 100px;
+    background-color: ivory;
+    float: left;
+    margin-right: 16px;
+    border-radius: 3%;
+    cursor: pointer;
+    text-align: center;
+    line-height: 100px;
+    transition: all 0.2s;
+    position: relative;
+}
+.box:hover{
+    background-color: rgb(138, 17, 108);
+    color: white;
+    
+}
+.box:active{
+    top: 4px;
+    
+}
+#box4{
+    margin-right: 0;
+}
+
+#startreset{
+    width: 100px;
+    height: 40px;
+    background-color: teal;
+    text-align: center;
+    line-height: 35px;
+    margin: 80px auto;
+    font-family: cursive;
+    position: relative;
+
+}
+
+#startreset:hover{
+    background-color: rgb(58, 110, 74);
+    color: white;
+}
+
+#startreset:active{
+    top: 4px;
+}
+
+#timer{
+    width: 200px;
+    height: 40px;
+    background-color:rgb(101, 173, 123);
+    text-align: center;
+    line-height: 35px;
+    margin: 80px auto;
+    font-family: cursive;
+    position: absolute;
+    top: 390px;
+    left:500px;
+    /*visibility: hidden;*/ /* interact with other elements even its hidden */
+    display: none;
+    
+}
+
+#gameover{
+    width: 550px;
+    height:240px ;
+    background:linear-gradient(#f59116,#e31010);
+    color: white;
+    font-size: 40px;
+    text-align: center;
+    position: absolute;
+    text-transform: uppercase;
+    top: 100px;
+    left: 90px;
+    font-family: cursive;
+    z-index: 2;/* חייב להיות גדול מ0 כדי להופיע מעל כולם */
+    display: none;
+}
